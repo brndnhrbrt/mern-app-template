@@ -8,7 +8,7 @@ const app = express();
 //connects to database
 connectDB();
 
-//init middleware(code that goes in the middle xD)
+//init middleware
 app.use(express.json({ extended: false }));
 
 //init api routes
