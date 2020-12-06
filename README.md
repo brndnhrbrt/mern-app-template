@@ -6,6 +6,10 @@ This is a barebones MERN Stack application with user authentication.
 
 In the project directory, you can run:
 
+### `npm run dev`
+
+Runs both the client and server using concurrently for development
+
 ### `npm run server`
 
 Runs the backend express server app in the development mode on port 9000
@@ -13,10 +17,6 @@ Runs the backend express server app in the development mode on port 9000
 ### `npm run client`
 
 Runs the frontend react app in the development mode on port 3000
-
-### `npm run dev`
-
-Runs both the client and server using concurrently
 
 ### `npm start`
 
