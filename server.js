@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const connectDB = require('./config/db')
 
 //init app
@@ -11,11 +12,14 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 //init api routes
-app.get('/', (req, res) => {
-    res.send('API Running');
-});
-
 require('./routes/router')(app);
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
 
 //start server
 const PORT = process.env.PORT || 9000;
