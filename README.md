@@ -24,4 +24,4 @@ Runs the backend app, meant for production mode
 
 ## Config default.json file
 
-Inside of the config/ folder there is an example default.json file. Create a new default.json file and add your connection string to your mongo database.
+Inside of the `config/` folder there is an example `default.example.json` file. Create a new `default.json` file and add your connection string to your mongo database.
