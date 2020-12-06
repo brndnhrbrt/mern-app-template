@@ -32,7 +32,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <Link className="navbar-brand" to="/">Guild App</Link>
+            <Link className="navbar-brand" to="/">Template App</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span className="navbar-toggler-icon"></span>
             </button>

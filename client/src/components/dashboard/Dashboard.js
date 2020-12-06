@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Dashboard = ({ auth: { user, loading } }) => {
     return (
         <div className="jumbotron">
-            { !loading && (
+            { !loading && user && (
                 <div className="container">
                     <h1 className="display-3">Hello, {user.name}</h1>
                     <p>This is the dashboard</p>
