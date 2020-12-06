@@ -2,16 +2,16 @@ const express = require('express');
 const path = require('path');
 const connectDB = require('./config/db')
 
-//init app
+// init app
 const app = express();
 
-//connects to database
+// connect to database
 connectDB();
 
-//init middleware
+// init middleware
 app.use(express.json({ extended: false }));
 
-//init api routes
+// init api routes
 require('./routes/router')(app);
 
 if (process.env.NODE_ENV === 'production') {
@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-//start server
+// start server
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => console.log(`Server up on port ${PORT}`));
 
